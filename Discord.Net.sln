@@ -16,15 +16,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discord.Net.V4.Rest", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discord.Net.V4.Core", "src\Discord.Net.V4.Core\Discord.Net.V4.Core.csproj", "{3277421C-AD38-43A7-89EB-D4E1F866004E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discord.Net.V4.Audio", "src\Discord.Net.V4.Audio\Discord.Net.V4.Audio.csproj", "{EE97E2F3-8A85-46D4-A5D6-EE985047F9F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discord.Net.V4.Audio", "src\Discord.Net.V4.Audio\Discord.Net.V4.Audio.csproj", "{EE97E2F3-8A85-46D4-A5D6-EE985047F9F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discord.Net.Models", "src\Discord.Net.Models\Discord.Net.Models.csproj", "{2EC5A01A-91CB-4E3F-AFBD-7DDAEC61FF15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discord.Net.Models", "src\Discord.Net.Models\Discord.Net.Models.csproj", "{2EC5A01A-91CB-4E3F-AFBD-7DDAEC61FF15}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SourceGenerators", "SourceGenerators", "{C1C763AF-3DC5-4F7D-8551-0A65B6011305}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discord.Net.Hanz", "sourcegen\Discord.Net.Hanz\Discord.Net.Hanz.csproj", "{595DFC73-902A-4A2B-BE33-16B627134451}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discord.Net.Hanz", "sourcegen\Discord.Net.Hanz\Discord.Net.Hanz.csproj", "{595DFC73-902A-4A2B-BE33-16B627134451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureSamples", "samples\FeatureSamples\FeatureSamples.csproj", "{2A082FC0-B17A-4109-9B73-2B2F721F49E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeatureSamples", "samples\FeatureSamples\FeatureSamples.csproj", "{2A082FC0-B17A-4109-9B73-2B2F721F49E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

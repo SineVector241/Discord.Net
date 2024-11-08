@@ -210,3 +210,6 @@ docs/api/\.manifest
 
 # Codealike UID
 codealike.json
+
+# This is so coderush data isn't included...
+.cr/

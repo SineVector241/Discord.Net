@@ -8,6 +8,7 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <IsAotCompatible>false</IsAotCompatible>
     <RootNamespace>Discord.Audio</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>

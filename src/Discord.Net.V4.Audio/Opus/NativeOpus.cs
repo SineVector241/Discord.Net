@@ -80,6 +80,15 @@ namespace Discord.Audio.Opus
         /// </summary>
         /// <param name="st">Encoder state.</param>
         /// <param name="request">This and all remaining parameters should be replaced by one of the convenience macros in <see cref="GenericCTL"/> or <see cref="EncoderCTL"/>.</param>
+        /// <returns><see cref="OpusErrorCodes"/></returns>
+        [LibraryImport(DllName)]
+        public static unsafe partial int opus_encoder_ctl(OpusEncoderSafeHandle st, int request); //Apparently GenericCTL.OPUS_RESET_STATE exists.
+
+        /// <summary>
+        /// Perform a CTL function on an <see cref="OpusEncoderSafeHandle"/>.
+        /// </summary>
+        /// <param name="st">Encoder state.</param>
+        /// <param name="request">This and all remaining parameters should be replaced by one of the convenience macros in <see cref="GenericCTL"/> or <see cref="EncoderCTL"/>.</param>
         /// <param name="data">The data to input/output.</param>
         /// <returns><see cref="OpusErrorCodes"/></returns>
         [LibraryImport(DllName)]
@@ -156,6 +165,15 @@ namespace Discord.Audio.Opus
         /// </summary>
         /// <param name="st">Decoder state.</param>
         /// <param name="request">This and all remaining parameters should be replaced by one of the convenience macros in <see cref="GenericCTL"/> or <see cref="DecoderCTL"/>.</param>
+        /// <returns><see cref="OpusErrorCodes"/></returns>
+        [LibraryImport(DllName)]
+        public static unsafe partial int opus_decoder_ctl(OpusDecoderSafeHandle st, int request); //Apparently GenericCTL.OPUS_RESET_STATE exists.
+
+        /// <summary>
+        /// Perform a CTL function on an <see cref="OpusDecoderSafeHandle"/>.
+        /// </summary>
+        /// <param name="st">Decoder state.</param>
+        /// <param name="request">This and all remaining parameters should be replaced by one of the convenience macros in <see cref="GenericCTL"/> or <see cref="DecoderCTL"/>.</param>
         /// <param name="data">The data to input or output.</param>
         /// <returns><see cref="OpusErrorCodes"/></returns>
         [LibraryImport(DllName)]
@@ -198,6 +216,15 @@ namespace Discord.Audio.Opus
         /// <param name="dec">State to be freed.</param>
         [LibraryImport(DllName)]
         public static partial void opus_dred_decoder_destroy(IntPtr dec);
+
+        /// <summary>
+        /// Perform a CTL function on an <see cref="OpusDREDDecoderSafeHandle"/>.
+        /// </summary>
+        /// <param name="dred_dec">DRED Decoder state.</param>
+        /// <param name="request">This and all remaining parameters should be replaced by one of the convenience macros in <see cref="GenericCTL"/> or <see cref="DecoderCTL"/>.</param>
+        /// <returns><see cref="OpusErrorCodes"/></returns>
+        [LibraryImport(DllName)]
+        public static unsafe partial int opus_dred_decoder_ctl(OpusDREDDecoderSafeHandle dred_dec, int request); //Apparently GenericCTL.OPUS_RESET_STATE exists.
 
         /// <summary>
         /// Perform a CTL function on an <see cref="OpusDREDDecoderSafeHandle"/>.
@@ -591,6 +618,15 @@ namespace Discord.Audio.Opus
         /// </summary>
         /// <param name="st">Multistream encoder state.</param>
         /// <param name="request">This and all remaining parameters should be replaced by one of the convenience macros in <see cref="GenericCTL"/>, <see cref="EncoderCTL"/>, or <see cref="MultistreamCTL"/> specific encoder and decoder CTLs.</param>
+        /// <returns><see cref="OpusErrorCodes"/></returns>
+        [LibraryImport(DllName)]
+        public static unsafe partial int opus_multistream_encoder_ctl(OpusMSEncoderSafeHandle st, int request); //Apparently GenericCTL.OPUS_RESET_STATE exists.
+
+        /// <summary>
+        /// Perform a CTL function on a <see cref="OpusMSEncoderSafeHandle"/>.
+        /// </summary>
+        /// <param name="st">Multistream encoder state.</param>
+        /// <param name="request">This and all remaining parameters should be replaced by one of the convenience macros in <see cref="GenericCTL"/>, <see cref="EncoderCTL"/>, or <see cref="MultistreamCTL"/> specific encoder and decoder CTLs.</param>
         /// <param name="data">The input/output data.</param>
         /// <returns><see cref="OpusErrorCodes"/></returns>
         [LibraryImport(DllName)]
@@ -668,6 +704,15 @@ namespace Discord.Audio.Opus
         /// <returns>Number of samples decoded on success or a negative error code (see <see cref="OpusErrorCodes"/>) on failure.</returns>
         [LibraryImport(DllName)]
         public static unsafe partial int opus_multistream_decode_float(OpusMSDecoderSafeHandle st, byte* data, int len, float* pcm, int frame_size, int decode_fec);
+
+        /// <summary>
+        /// Perform a CTL function on a <see cref="OpusMSEncoderSafeHandle"/>.
+        /// </summary>
+        /// <param name="st">Multistream decoder state.</param>
+        /// <param name="request">This and all remaining parameters should be replaced by one of the convenience macros in <see cref="GenericCTL"/>, <see cref="DecoderCTL"/>, or <see cref="MultistreamCTL"/> specific encoder and decoder CTLs.</param>
+        /// <returns><see cref="OpusErrorCodes"/></returns>
+        [LibraryImport(DllName)]
+        public static unsafe partial int opus_multistream_decoder_ctl(OpusMSDecoderSafeHandle st, int request); //Apparently GenericCTL.OPUS_RESET_STATE exists.
 
         /// <summary>
         /// Perform a CTL function on a <see cref="OpusMSEncoderSafeHandle"/>.
